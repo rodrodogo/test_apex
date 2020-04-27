@@ -28,11 +28,11 @@ prompt APPLICATION 106 - GIT_PRUEBA
 -- Application Export:
 --   Application:     106
 --   Name:            GIT_PRUEBA
---   Date and Time:   11:06 Monday April 27, 2020
+--   Date and Time:   11:09 Monday April 27, 2020
 --   Exported By:     RODRODOGO
 --   Flashback:       0
 --   Export Type:     Application Export
---     Pages:                      3
+--     Pages:                      5
 --       Items:                    4
 --       Processes:                4
 --       Regions:                  4
@@ -113,7 +113,7 @@ wwv_flow_api.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'GIT_PRUEBA'
 ,p_last_updated_by=>'RODRODOGO'
-,p_last_upd_yyyymmddhh24miss=>'20200427110602'
+,p_last_upd_yyyymmddhh24miss=>'20200427110915'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>3
 ,p_ui_type_name => null
@@ -134,6 +134,22 @@ wwv_flow_api.create_list_item(
 ,p_list_item_link_target=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:'
 ,p_list_item_icon=>'fa-home'
 ,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(3806013795092364)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'desa_1'
+,p_list_item_link_target=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'2'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(3806629354095416)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'desa_2'
+,p_list_item_link_target=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'3'
 );
 end;
 /
@@ -10598,6 +10614,34 @@ wwv_flow_api.create_page_item(
 ,p_attribute_02=>'N'
 ,p_attribute_03=>'N'
 ,p_attribute_04=>'BOTH'
+);
+end;
+/
+prompt --application/pages/page_00002
+begin
+wwv_flow_api.create_page(
+ p_id=>2
+,p_user_interface_id=>wwv_flow_api.id(3791274898009808)
+,p_name=>'desa_1'
+,p_step_title=>'desa_1'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'RODRODOGO'
+,p_last_upd_yyyymmddhh24miss=>'20200427110844'
+);
+end;
+/
+prompt --application/pages/page_00003
+begin
+wwv_flow_api.create_page(
+ p_id=>3
+,p_user_interface_id=>wwv_flow_api.id(3791274898009808)
+,p_name=>'desa_2'
+,p_step_title=>'desa_2'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'RODRODOGO'
+,p_last_upd_yyyymmddhh24miss=>'20200427110915'
 );
 end;
 /
