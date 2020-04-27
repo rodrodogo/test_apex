@@ -28,14 +28,14 @@ prompt APPLICATION 106 - GIT_PRUEBA
 -- Application Export:
 --   Application:     106
 --   Name:            GIT_PRUEBA
---   Date and Time:   12:00 Monday April 27, 2020
+--   Date and Time:   12:28 Monday April 27, 2020
 --   Exported By:     RODRODOGO
 --   Flashback:       0
 --   Export Type:     Application Export
 --     Pages:                      5
 --       Items:                    5
 --       Processes:                4
---       Regions:                  6
+--       Regions:                  8
 --       Buttons:                  1
 --     Shared Components:
 --       Logic:
@@ -113,7 +113,7 @@ wwv_flow_api.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'GIT_PRUEBA'
 ,p_last_updated_by=>'RODRODOGO'
-,p_last_upd_yyyymmddhh24miss=>'20200427115848'
+,p_last_upd_yyyymmddhh24miss=>'20200427122835'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>3
 ,p_ui_type_name => null
@@ -10571,7 +10571,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'RODRODOGO'
-,p_last_upd_yyyymmddhh24miss=>'20200427110602'
+,p_last_upd_yyyymmddhh24miss=>'20200427122835'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2604372923306733)
@@ -10579,6 +10579,18 @@ wwv_flow_api.create_page_plug(
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_plug_template=>wwv_flow_api.id(3708068598009728)
 ,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(2605335959306743)
+,p_plug_name=>'MOD desde rama'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(3708068598009728)
+,p_plug_display_sequence=>20
 ,p_include_in_reg_disp_sel_yn=>'Y'
 ,p_plug_display_point=>'BODY'
 ,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
