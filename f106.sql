@@ -28,7 +28,7 @@ prompt APPLICATION 106 - GIT_PRUEBA
 -- Application Export:
 --   Application:     106
 --   Name:            GIT_PRUEBA
---   Date and Time:   19:24 Wednesday April 29, 2020
+--   Date and Time:   19:28 Wednesday April 29, 2020
 --   Exported By:     RODRODOGO
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -113,7 +113,7 @@ wwv_flow_api.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'GIT_PRUEBA'
 ,p_last_updated_by=>'RODRODOGO'
-,p_last_upd_yyyymmddhh24miss=>'20200429192438'
+,p_last_upd_yyyymmddhh24miss=>'20200429192826'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>3
 ,p_ui_type_name => null
@@ -10639,7 +10639,34 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'RODRODOGO'
-,p_last_upd_yyyymmddhh24miss=>'20200429191736'
+,p_last_upd_yyyymmddhh24miss=>'20200429192826'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(4011169326837313)
+,p_plug_name=>'Desde desa_2'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(4091146798301385)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(4011290822837314)
+,p_name=>'P3_DOS'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(4011169326837313)
+,p_prompt=>'Dos'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_api.id(4150723437301426)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
 );
 end;
 /
